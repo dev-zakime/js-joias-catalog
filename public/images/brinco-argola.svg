@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <radialGradient id="bg4" cx="50%" cy="40%">
+      <stop offset="0%" stop-color="#1F1F1F"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </radialGradient>
+    <linearGradient id="silver4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#B0B0B0"/>
+      <stop offset="100%" stop-color="#5A5A5A"/>
+    </linearGradient>
+  </defs>
+  <rect width="500" height="500" fill="url(#bg4)"/>
+  <!-- par de argolas -->
+  <g>
+    <!-- esquerda -->
+    <circle cx="175" cy="270" r="90" fill="none" stroke="url(#silver4)" stroke-width="11"/>
+    <path d="M110 210 a90 90 0 0 1 130 0" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.5" stroke-linecap="round"/>
+    <circle cx="175" cy="180" r="6" fill="url(#silver4)"/>
+    <!-- direita -->
+    <circle cx="325" cy="270" r="90" fill="none" stroke="url(#silver4)" stroke-width="11"/>
+    <path d="M260 210 a90 90 0 0 1 130 0" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.5" stroke-linecap="round"/>
+    <circle cx="325" cy="180" r="6" fill="url(#silver4)"/>
+  </g>
+</svg>

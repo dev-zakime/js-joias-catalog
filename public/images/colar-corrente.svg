@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <radialGradient id="bg7" cx="50%" cy="40%">
+      <stop offset="0%" stop-color="#1F1F1F"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </radialGradient>
+    <linearGradient id="silver7" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#B0B0B0"/>
+      <stop offset="100%" stop-color="#5A5A5A"/>
+    </linearGradient>
+  </defs>
+  <rect width="500" height="500" fill="url(#bg7)"/>
+  <!-- corrente (curva) como série de elos -->
+  <path id="chain" d="M100 160 Q250 360 400 160" fill="none" stroke="url(#silver7)" stroke-width="5" stroke-dasharray="2 10" stroke-linecap="round"/>
+  <path d="M100 160 Q250 360 400 160" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.4" stroke-dasharray="1 14" stroke-linecap="round"/>
+  <!-- elos maiores visíveis -->
+  <g fill="none" stroke="url(#silver7)" stroke-width="3">
+    <ellipse cx="130" cy="195" rx="9" ry="6" transform="rotate(60 130 195)"/>
+    <ellipse cx="170" cy="245" rx="9" ry="6" transform="rotate(70 170 245)"/>
+    <ellipse cx="215" cy="290" rx="9" ry="6" transform="rotate(80 215 290)"/>
+    <ellipse cx="250" cy="300" rx="9" ry="6"/>
+    <ellipse cx="285" cy="290" rx="9" ry="6" transform="rotate(100 285 290)"/>
+    <ellipse cx="330" cy="245" rx="9" ry="6" transform="rotate(110 330 245)"/>
+    <ellipse cx="370" cy="195" rx="9" ry="6" transform="rotate(120 370 195)"/>
+  </g>
+</svg>

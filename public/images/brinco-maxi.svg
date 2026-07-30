@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <radialGradient id="bg6" cx="50%" cy="40%">
+      <stop offset="0%" stop-color="#1F1F1F"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </radialGradient>
+    <linearGradient id="silver6" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#B0B0B0"/>
+      <stop offset="100%" stop-color="#5A5A5A"/>
+    </linearGradient>
+    <radialGradient id="gem6" cx="40%" cy="35%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="30%" stop-color="#E9D5FF"/>
+      <stop offset="70%" stop-color="#A855F7"/>
+      <stop offset="100%" stop-color="#581C87"/>
+    </radialGradient>
+  </defs>
+  <rect width="500" height="500" fill="url(#bg6)"/>
+  <g>
+    <!-- esquerda -->
+    <circle cx="175" cy="190" r="9" fill="url(#silver6)"/>
+    <circle cx="175" cy="280" r="55" fill="url(#gem6)"/>
+    <circle cx="175" cy="280" r="55" fill="none" stroke="#FFFFFF" stroke-width="1.5" opacity="0.6"/>
+    <path d="M150 255 L175 235 L200 255 L192 285 L158 285 Z" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.5"/>
+    <!-- direita -->
+    <circle cx="325" cy="190" r="9" fill="url(#silver6)"/>
+    <circle cx="325" cy="280" r="55" fill="url(#gem6)"/>
+    <circle cx="325" cy="280" r="55" fill="none" stroke="#FFFFFF" stroke-width="1.5" opacity="0.6"/>
+    <path d="M300 255 L325 235 L350 255 L342 285 L308 285 Z" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.5"/>
+  </g>
+</svg>

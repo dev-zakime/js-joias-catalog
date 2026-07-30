@@ -1,0 +1,29 @@
+---
+import { CATEGORIES } from '../data/products';
+---
+
+<!-- Filtro de categorias - interage com o grid via JS puro (sem framework) -->
+<div id="filtro" class="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
+  {CATEGORIES.map((cat, i) => (
+    <button
+      data-filter={cat.id}
+      class:list={[
+        'filter-btn rounded-full px-5 sm:px-7 py-2.5 sm:py-3 text-sm font-semibold uppercase tracking-wide transition-all duration-300 hover:scale-105 active:scale-95',
+        i === 0
+          ? 'bg-gold text-white shadow-[0_0_20px_var(--tw-shadow-gold-glow)]'
+          : 'bg-white/5 text-silver/70 hover:bg-white/10 hover:text-silver border border-white/10',
+      ]}
+    >
+      {cat.label}
+    </button>
+  ))}
+</div>
+
+<style>
+  .filter-btn.is-active {
+    background-color: #D4AF37;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.35);
+    transform: scale(1.05);
+  }
+</style>

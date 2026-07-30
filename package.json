@@ -1,0 +1,30 @@
+{
+  "name": "js-joias-prata925",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Catálogo de joias em prata 925 - JS",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "lint": "eslint . --ext .ts,.astro",
+    "lint:fix": "eslint . --ext .ts,.astro --fix"
+  },
+  "dependencies": {
+    "astro": "^7.1.6"
+  },
+  "devDependencies": {
+    "@astrojs/tailwind": "^5.1.0",
+    "@typescript-eslint/eslint-plugin": "^8.65.0",
+    "@typescript-eslint/parser": "^8.65.0",
+    "eslint": "^10.8.0",
+    "eslint-plugin-astro": "^3.0.1",
+    "tailwindcss": "^3.4.10"
+  },
+  "allowScripts": {
+    "sharp@0.33.5": true,
+    "esbuild@0.28.1": true
+  }
+}

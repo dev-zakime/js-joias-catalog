@@ -1,0 +1,44 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fundo -->
+  <rect width="1200" height="630" fill="#0A0A0A"/>
+  
+  <!-- Gradiente de fundo -->
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1F1F1F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0A0A0A;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#D4AF37;stop-opacity:0.05" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="1200" height="630" fill="url(#grad1)"/>
+  
+  <!-- Manchas de luz douradas -->
+  <ellipse cx="200" cy="315" rx="300" ry="300" fill="url(#grad2)"/>
+  <ellipse cx="1000" cy="315" rx="250" ry="250" fill="url(#grad2)"/>
+  
+  <!-- Texto principal -->
+  <text x="600" y="280" text-anchor="middle" font-family="Georgia, serif" font-size="80" font-weight="bold" fill="#E5E4E2">
+    JS
+  </text>
+  
+  <text x="600" y="350" text-anchor="middle" font-family="Georgia, serif" font-size="36" fill="#D4AF37">
+    Elegância em Prata 925
+  </text>
+  
+  <!-- Linha decorativa -->
+  <line x1="400" y1="380" x2="800" y2="380" stroke="#D4AF37" stroke-width="2"/>
+  
+  <!-- Subtítulo -->
+  <text x="600" y="430" text-anchor="middle" font-family="Georgia, serif" font-size="24" fill="#9CA3AF">
+    Elegância para todos
+  </text>
+  
+  <!-- Detalhes decorativos -->
+  <circle cx="600" cy="520" r="8" fill="#D4AF37"/>
+  <circle cx="580" cy="520" r="4" fill="#D4AF37" opacity="0.6"/>
+  <circle cx="620" cy="520" r="4" fill="#D4AF37" opacity="0.6"/>
+</svg>

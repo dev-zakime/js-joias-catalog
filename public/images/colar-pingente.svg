@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <radialGradient id="bg8" cx="50%" cy="40%">
+      <stop offset="0%" stop-color="#1F1F1F"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </radialGradient>
+    <linearGradient id="silver8" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#B0B0B0"/>
+      <stop offset="100%" stop-color="#5A5A5A"/>
+    </linearGradient>
+    <radialGradient id="gem8" cx="40%" cy="35%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="30%" stop-color="#E9D5FF"/>
+      <stop offset="70%" stop-color="#A855F7"/>
+      <stop offset="100%" stop-color="#581C87"/>
+    </radialGradient>
+  </defs>
+  <rect width="500" height="500" fill="url(#bg8)"/>
+  <!-- corrente -->
+  <path d="M120 150 Q250 300 380 150" fill="none" stroke="url(#silver8)" stroke-width="3.5" stroke-dasharray="2 9" stroke-linecap="round"/>
+  <!-- pingente -->
+  <line x1="250" y1="265" x2="250" y2="300" stroke="url(#silver8)" stroke-width="3"/>
+  <circle cx="250" cy="345" r="48" fill="url(#gem8)"/>
+  <circle cx="250" cy="345" r="48" fill="none" stroke="#FFFFFF" stroke-width="1.5" opacity="0.6"/>
+  <path d="M228 322 L250 305 L272 322 L264 355 L236 355 Z" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.5"/>
+</svg>

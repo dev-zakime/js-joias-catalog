@@ -1,0 +1,32 @@
+---
+import { SITE } from '../config';
+
+const ano = new Date().getFullYear();
+---
+
+<footer class="relative border-t border-white/5 bg-ink-900 mt-24">
+  <!-- CTA final -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="text-center max-w-2xl mx-auto">
+      <h2 class="font-display text-4xl sm:text-5xl text-silver">
+        ENCONTRE <span class="text-gold">SEU ESTILO</span>
+      </h2>
+      <p class="mt-4 text-silver/60">
+        Escolha a peça perfeita para você e finalize pelo WhatsApp.
+      </p>
+    </div>
+  </div>
+
+  <!-- Rodapé inferior -->
+  <div class="border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="font-display text-xl tracking-wider text-silver">{SITE.brandName}</span>
+        <span class="text-[10px] uppercase tracking-[0.25em] text-silver/40">Prata 925</span>
+      </div>
+      <p class="text-xs text-silver/40 text-center md:text-right">
+        © {ano} {SITE.brandName} · Joias em Prata 925
+      </p>
+    </div>
+  </div>
+</footer>

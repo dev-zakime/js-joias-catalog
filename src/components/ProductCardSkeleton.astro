@@ -1,0 +1,43 @@
+---
+// Skeleton loader para ProductCard - mostra enquanto conteúdo carrega
+---
+
+<article class="product-card-skeleton group relative overflow-hidden rounded-2xl border border-white/10 bg-ink-800">
+  <!-- Imagem skeleton -->
+  <div class="relative aspect-square bg-gradient-to-br from-ink-700 to-ink-900">
+    <div class="absolute inset-0 animate-pulse bg-gradient-to-r from-ink-700 via-ink-600 to-ink-700 bg-[length:200%_100%]"></div>
+    <!-- Badge skeleton -->
+    <div class="absolute top-3 left-3 h-6 w-16 rounded-full bg-ink/80 animate-pulse"></div>
+  </div>
+
+  <!-- Informações skeleton -->
+  <div class="p-4 sm:p-5 space-y-3">
+    <!-- Título skeleton -->
+    <div class="h-5 w-3/4 rounded bg-ink-700 animate-pulse"></div>
+    <!-- Descrição skeleton -->
+    <div class="space-y-2">
+      <div class="h-3 w-full rounded bg-ink-700 animate-pulse"></div>
+      <div class="h-3 w-2/3 rounded bg-ink-700 animate-pulse"></div>
+    </div>
+    <!-- Preço e botão skeleton -->
+    <div class="flex items-center justify-between">
+      <div class="h-6 w-20 rounded bg-ink-700 animate-pulse"></div>
+      <div class="h-4 w-12 rounded bg-ink-700 animate-pulse"></div>
+    </div>
+  </div>
+</article>
+
+<style>
+  .product-card-skeleton {
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+</style>

@@ -1,0 +1,66 @@
+---
+import { SITE } from '../config';
+---
+
+<section id="sobre" class="relative py-20 md:py-28">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <!-- Texto -->
+      <div>
+        <span class="inline-block text-xs font-semibold uppercase tracking-[0.3em] text-accent mb-4">
+          Nossa história
+        </span>
+        <h2 class="font-display text-4xl sm:text-5xl text-silver leading-tight">
+          PRATA DE VERDADE,<br />
+          <span class="text-accent">BRILHO QUE DURA.</span>
+        </h2>
+        <p class="mt-6 text-silver/60 leading-relaxed">
+          A <strong class="text-silver">{SITE.brandName}</strong> nasceu da paixão por joias
+          autênticas. Trabalhamos exclusivamente com <strong class="text-silver">prata 925</strong>
+          — a mesma liga usada pelas maiores joalherias do mundo — selecionando cada peça
+          para garantir brilho, durabilidade e conforto.
+        </p>
+        <p class="mt-4 text-silver/60 leading-relaxed">
+          Cada joia conta uma história. Escolha a sua e brilhe todos os dias.
+        </p>
+
+        <!-- Diferenciais -->
+        <div class="mt-8 grid grid-cols-3 gap-4">
+          <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-center">
+            <p class="font-display text-3xl text-accent">925</p>
+            <p class="mt-1 text-xs uppercase tracking-wide text-silver/50">Prata legítima</p>
+          </div>
+          <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-center">
+            <p class="font-display text-3xl text-accent">100%</p>
+            <p class="mt-1 text-xs uppercase tracking-wide text-silver/50">Hipossalergênica</p>
+          </div>
+          <div class="rounded-xl border border-white/10 bg-white/5 p-4 text-center">
+            <p class="font-display text-3xl text-accent">★</p>
+            <p class="mt-1 text-xs uppercase tracking-wide text-silver/50">Garantia</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Visual -->
+      <div class="relative">
+        <div class="relative aspect-[4/5] overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-accent/20 via-ink-800 to-ink-900">
+          <!-- Decoração geométrica em vez de foto -->
+          <div class="absolute inset-0 flex items-center justify-center">
+            <svg class="w-2/3 h-2/3 text-accent/40" viewBox="0 0 200 200" fill="none">
+              <circle cx="100" cy="100" r="80" stroke="currentColor" stroke-width="1" />
+              <circle cx="100" cy="100" r="60" stroke="currentColor" stroke-width="1" />
+              <circle cx="100" cy="100" r="40" stroke="currentColor" stroke-width="1" />
+              <path d="M100 20 L100 180 M20 100 L180 100" stroke="currentColor" stroke-width="0.5" />
+            </svg>
+          </div>
+          <div class="absolute bottom-6 left-6 right-6">
+            <p class="font-display text-3xl text-silver">PRATA 925</p>
+            <p class="text-sm text-silver/50">Qualidade que você sente</p>
+          </div>
+        </div>
+        <!-- Brilho -->
+        <div class="absolute -top-6 -right-6 w-32 h-32 bg-accent/30 rounded-full blur-[60px]"></div>
+      </div>
+    </div>
+  </div>
+</section>

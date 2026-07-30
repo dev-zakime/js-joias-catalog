@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import ProductCard from '../components/ProductCard.astro';
+import ProductCardSkeleton from '../components/ProductCardSkeleton.astro';
+import ProductModal from '../components/ProductModal.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import ScrollToTop from '../components/ScrollToTop.astro';
+import { products } from '../data/products';
+---
+
+<BaseLayout>
+  <Header />
+  <main>
+    <Hero />
+
+    <!-- Coleção / Catálogo -->
+    <section id="colecao" class="py-20 md:py-28">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Grid de produtos -->
+        <div id="product-grid" class="mt-12 grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          <!-- Skeletons iniciais (serão removidos pelo JS) -->
+          <div id="skeleton-loader" class="contents">
+            <ProductCardSkeleton />
+            <ProductCardSkeleton />
+            <ProductCardSkeleton />
+            <ProductCardSkeleton />
+            <ProductCardSkeleton />
+            <ProductCardSkeleton />
+          </div>
+          <!-- Produtos reais (inicialmente ocultos) -->
+          <div id="real-products" class="contents hidden">
+            {products.map((product) => <ProductCard product={product} />)}
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+
+  <!-- Modal de detalhes -->
+  <ProductModal />
+
+  <!-- WhatsApp flutuante -->
+  <WhatsAppButton />
+
+  <!-- Scroll to top -->
+  <ScrollToTop />
+
+  <!-- Script principal modularizado -->
+  <script src="../scripts/main.ts"></script>
+</BaseLayout>

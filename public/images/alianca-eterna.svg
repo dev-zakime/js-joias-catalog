@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <radialGradient id="bg2" cx="50%" cy="40%">
+      <stop offset="0%" stop-color="#1F1F1F"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </radialGradient>
+    <linearGradient id="silver2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#B0B0B0"/>
+      <stop offset="100%" stop-color="#5A5A5A"/>
+    </linearGradient>
+    <radialGradient id="gem2" cx="40%" cy="35%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="60%" stop-color="#E9D5FF"/>
+      <stop offset="100%" stop-color="#9333EA"/>
+    </radialGradient>
+  </defs>
+  <rect width="500" height="500" fill="url(#bg2)"/>
+  <ellipse cx="250" cy="280" rx="150" ry="70" fill="none" stroke="url(#silver2)" stroke-width="24"/>
+  <ellipse cx="250" cy="280" rx="150" ry="70" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.3"/>
+  <!-- pedras ao redor da aliança -->
+  <g>
+    <circle cx="130" cy="270" r="5" fill="url(#gem2)"/>
+    <circle cx="160" cy="240" r="5" fill="url(#gem2)"/>
+    <circle cx="200" cy="218" r="5" fill="url(#gem2)"/>
+    <circle cx="250" cy="210" r="5" fill="url(#gem2)"/>
+    <circle cx="300" cy="218" r="5" fill="url(#gem2)"/>
+    <circle cx="340" cy="240" r="5" fill="url(#gem2)"/>
+    <circle cx="370" cy="270" r="5" fill="url(#gem2)"/>
+  </g>
+  <!-- brilho superior -->
+  <path d="M130 245 q120 -55 240 0" fill="none" stroke="#FFFFFF" stroke-width="4" opacity="0.5" stroke-linecap="round"/>
+</svg>
