@@ -47,5 +47,9 @@
         }
       ]
     }
-  ]
+  ],
+  "protection": {
+    "password": null,
+    "sso": null
+  }
 }
