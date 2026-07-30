@@ -47,10 +47,5 @@
         }
       ]
     }
-  ],
-  "env": {
-    "WHATSAPP_NUMBER": "@whatsapp_number",
-    "BRAND_NAME": "@brand_name",
-    "SITE_URL": "@site_url"
-  }
+  ]
 }

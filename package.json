@@ -13,10 +13,10 @@
     "lint:fix": "eslint . --ext .ts,.astro --fix"
   },
   "dependencies": {
-    "astro": "^7.1.6"
+    "astro": "^5.0.0"
   },
   "devDependencies": {
-    "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/tailwind": "^5.1.5",
     "@typescript-eslint/eslint-plugin": "^8.65.0",
     "@typescript-eslint/parser": "^8.65.0",
     "eslint": "^10.8.0",
