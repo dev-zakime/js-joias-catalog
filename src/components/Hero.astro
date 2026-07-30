@@ -4,7 +4,7 @@ import { SITE } from '../config';
 
 <section
   id="topo"
-  class="relative min-h-screen flex items-center overflow-hidden pt-16 md:pt-20"
+  class="relative min-h-screen flex items-center overflow-hidden pt-12 sm:pt-16 md:pt-20"
 >
   <!-- Fundo: gradientes elegantes -->
   <div class="absolute inset-0 -z-10">
@@ -20,37 +20,37 @@ import { SITE } from '../config';
     </div>
   </div>
 
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+  <div class="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 w-full">
     <div class="max-w-3xl animate-slide-up">
       <!-- Badge -->
-      <div class="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-4 py-1.5 mb-6">
+      <div class="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-3 py-1 sm:px-4 sm:py-1.5 mb-4 sm:mb-6">
         <span class="w-2 h-2 rounded-full bg-gold animate-pulse"></span>
-        <span class="text-xs font-semibold uppercase tracking-widest text-gold-light">Prata 925 · Elegância Atemporal</span>
+        <span class="text-[10px] sm:text-xs font-semibold uppercase tracking-widest text-gold-light">Prata 925 · Elegância Atemporal</span>
       </div>
 
       <!-- Título elegante -->
-      <h1 class="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl leading-[0.9] tracking-tight text-silver">
+      <h1 class="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[0.9] tracking-tight text-silver">
         Estilo<br />
         <span class="text-gold">em Cada</span><br />
         Detalhe.
       </h1>
 
       <!-- Subtítulo -->
-      <p class="mt-6 text-lg md:text-xl text-silver/60 max-w-xl leading-relaxed">
+      <p class="mt-4 sm:mt-6 text-sm sm:text-base md:text-lg lg:text-xl text-silver/60 max-w-xl leading-relaxed">
         Joias em <strong class="text-silver">prata 925</strong> para quem valoriza elegância.
         Peças atemporais para todos os estilos.
       </p>
 
       <!-- Opções de pagamento -->
-      <div class="mt-6 flex flex-wrap gap-4 text-sm text-silver/50">
+      <div class="mt-4 sm:mt-6 flex flex-wrap gap-3 sm:gap-4 text-xs sm:text-sm text-silver/50">
         <span class="flex items-center gap-2">
-          <svg class="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 20 20">
+          <svg class="w-3 h-3 sm:w-4 sm:h-4 text-gold" fill="currentColor" viewBox="0 0 20 20">
             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
           </svg>
           PIX à vista
         </span>
         <span class="flex items-center gap-2">
-          <svg class="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 20 20">
+          <svg class="w-3 h-3 sm:w-4 sm:h-4 text-gold" fill="currentColor" viewBox="0 0 20 20">
             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
           </svg>
           Cartão em até 18x
@@ -58,30 +58,30 @@ import { SITE } from '../config';
       </div>
 
       <!-- CTAs -->
-      <div class="mt-10 flex flex-wrap items-center gap-4">
+      <div class="mt-6 sm:mt-10 flex flex-wrap items-center gap-3 sm:gap-4">
         <a
           href="#colecao"
-          class="group inline-flex items-center gap-2 rounded-full bg-gold px-8 py-4 text-base font-bold uppercase tracking-wide text-white hover:bg-gold-dark hover:shadow-[0_0_30px_var(--tw-shadow-gold-glow)] transition-all duration-300 hover:scale-105 active:scale-95"
+          class="group inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-bold uppercase tracking-wide text-white hover:bg-gold-dark hover:shadow-[0_0_30px_var(--tw-shadow-gold-glow)] transition-all duration-300 hover:scale-105 active:scale-95"
         >
           Ver Peças
-          <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
         </a>
       </div>
 
       <!-- Selos de confiança -->
-      <div class="mt-12 flex flex-wrap gap-x-8 gap-y-3 text-sm text-silver/50">
+      <div class="mt-8 sm:mt-12 flex flex-wrap gap-x-6 sm:gap-x-8 gap-y-2 sm:gap-y-3 text-xs sm:text-sm text-silver/50">
         <span class="flex items-center gap-2">
-          <svg class="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+          <svg class="w-3 h-3 sm:w-4 sm:h-4 text-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
           Prata 925 Legítima
         </span>
         <span class="flex items-center gap-2">
-          <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          <svg class="w-3 h-3 sm:w-4 sm:h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
           Hipossalergênica
         </span>
         <span class="flex items-center gap-2">
-          <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+          <svg class="w-3 h-3 sm:w-4 sm:h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
           Envio Rápido
         </span>
       </div>
