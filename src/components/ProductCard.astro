@@ -35,11 +35,11 @@ const precoFormatado = product.price.toLocaleString('pt-BR', {
       class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
     />
     <!-- Badge 925 -->
-    <span class="absolute top-2 left-2 rounded-full bg-ink/80 backdrop-blur px-2 py-0.5 text-[9px] font-bold uppercase tracking-widest text-gold transition-transform duration-300 group-hover:scale-110">
+    <span class="absolute top-1.5 left-1.5 sm:top-2 sm:left-2 rounded-full bg-ink/80 backdrop-blur px-1.5 py-0.5 sm:px-2 sm:py-0.5 text-[8px] sm:text-[9px] font-bold uppercase tracking-widest text-gold transition-transform duration-300 group-hover:scale-110">
       Prata 925
     </span>
     {product.featured && (
-      <span class="absolute top-2 right-2 rounded-full bg-gold px-2 py-0.5 text-[9px] font-bold uppercase tracking-widest text-white animate-pulse-glow">
+      <span class="absolute top-1.5 right-1.5 sm:top-2 sm:right-2 rounded-full bg-gold px-1.5 py-0.5 sm:px-2 sm:py-0.5 text-[8px] sm:text-[9px] font-bold uppercase tracking-widest text-white animate-pulse-glow">
         ★ Destaque
       </span>
     )}
@@ -48,16 +48,24 @@ const precoFormatado = product.price.toLocaleString('pt-BR', {
   </div>
 
   <!-- Informações -->
-  <div class="p-2.5 sm:p-3 md:p-4">
-    <h3 class="font-semibold text-silver group-hover:text-gold transition-colors duration-300 line-clamp-2 min-h-[2rem] sm:min-h-[2.5rem] text-xs sm:text-sm md:text-base">
+  <div class="p-2 sm:p-2.5 md:p-4">
+    <h3 class="font-semibold text-silver group-hover:text-gold transition-colors duration-300 line-clamp-2 min-h-[1.8rem] sm:min-h-[2rem] md:min-h-[2.5rem] text-[10px] sm:text-xs md:text-base">
       {product.name}
     </h3>
-    <p class="mt-1 text-[10px] sm:text-xs md:text-sm text-silver/50 line-clamp-2 sm:line-clamp-3 group-hover:text-silver/70 transition-colors duration-300 min-h-[1.5rem] sm:min-h-[2.5rem]">{product.description}</p>
-    <div class="mt-2 sm:mt-3 flex items-center justify-between gap-1 sm:gap-2">
-      <span class="text-sm sm:text-base md:text-lg font-bold text-silver group-hover:text-gold transition-colors duration-300">{precoFormatado}</span>
-      <span class="inline-flex items-center gap-0.5 sm:gap-1 text-[9px] sm:text-[10px] md:text-xs font-semibold uppercase tracking-wide text-gold group-hover:translate-x-1 transition-transform duration-300 flex-shrink-0">
-        Ver
-        <svg class="w-2.5 h-2.5 sm:w-3 sm:h-3 md:w-3.5 md:h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <p class="mt-0.5 sm:mt-1 text-[9px] sm:text-[10px] md:text-sm text-silver/50 line-clamp-2 sm:line-clamp-3 group-hover:text-silver/70 transition-colors duration-300 min-h-[1.2rem] sm:min-h-[1.5rem] md:min-h-[2.5rem]">{product.description}</p>
+    <div class="mt-1.5 sm:mt-2 md:mt-3 space-y-0.5 sm:space-y-1">
+      <div class="flex items-baseline gap-0.5 sm:gap-1 md:gap-2">
+        <span class="text-xs sm:text-sm md:text-base md:text-lg font-bold text-silver group-hover:text-gold transition-colors duration-300">{precoFormatado}</span>
+        <span class="text-[8px] sm:text-[9px] md:text-[10px] md:text-xs text-silver/40">ou 6x de {(product.price / 6).toFixed(2)}</span>
+      </div>
+      <div class="flex items-center gap-0.5 sm:gap-1 text-[7px] sm:text-[8px] md:text-[9px] text-silver/40">
+        <span>PIX 5% OFF</span>
+        <span>•</span>
+        <span>6x sem juros</span>
+      </div>
+      <span class="inline-flex items-center gap-0.5 sm:gap-1 text-[8px] sm:text-[9px] md:text-[10px] md:text-xs font-semibold uppercase tracking-wide text-gold group-hover:translate-x-1 transition-transform duration-300 flex-shrink-0">
+        Ver Detalhes
+        <svg class="w-2 h-2 sm:w-2.5 sm:h-2.5 md:w-3 md:h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3" />
         </svg>
       </span>

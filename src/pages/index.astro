@@ -7,22 +7,86 @@ import ProductCardSkeleton from '../components/ProductCardSkeleton.astro';
 import ProductModal from '../components/ProductModal.astro';
 import Footer from '../components/Footer.astro';
 import WhatsAppButton from '../components/WhatsAppButton.astro';
-import ScrollToTop from '../components/ScrollToTop.astro';
+import InstagramButton from '../components/InstagramButton.astro';
 import { products } from '../data/products';
 ---
 
 <BaseLayout>
   <Header />
   <main>
+    <!-- Banner promocional -->
+    <div class="bg-gold/10 border-b border-gold/20 py-2 sm:py-3">
+      <div class="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 text-center">
+        <p class="text-xs sm:text-sm font-semibold text-gold">
+          🎁 PIX 5% OFF | 6x sem juros | FRETE GRÁTIS acima de R$ 249
+        </p>
+      </div>
+    </div>
+
     <Hero />
 
-    <!-- Coleção / Catálogo -->
-    <section id="colecao" class="py-16 sm:py-20 md:py-28">
+    <!-- Benefícios -->
+    <section class="py-8 sm:py-12 bg-ink-800/50 border-y border-white/5">
       <div class="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+          <div class="text-center">
+            <div class="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-2 rounded-full bg-gold/10 flex items-center justify-center">
+              <svg class="w-5 h-5 sm:w-6 sm:h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+            </div>
+            <h3 class="text-xs sm:text-sm font-semibold text-silver">Prata 925</h3>
+            <p class="text-[10px] sm:text-xs text-silver/50">De verdade</p>
+          </div>
+          <div class="text-center">
+            <div class="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-2 rounded-full bg-gold/10 flex items-center justify-center">
+              <svg class="w-5 h-5 sm:w-6 sm:h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            </div>
+            <h3 class="text-xs sm:text-sm font-semibold text-silver">PIX à Vista</h3>
+            <p class="text-[10px] sm:text-xs text-silver/50">5% de desconto</p>
+          </div>
+          <div class="text-center">
+            <div class="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-2 rounded-full bg-gold/10 flex items-center justify-center">
+              <svg class="w-5 h-5 sm:w-6 sm:h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" /></svg>
+            </div>
+            <h3 class="text-xs sm:text-sm font-semibold text-silver">Cartão</h3>
+            <p class="text-[10px] sm:text-xs text-silver/50">Até 6x sem juros</p>
+          </div>
+          <div class="text-center">
+            <div class="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-2 rounded-full bg-gold/10 flex items-center justify-center">
+              <svg class="w-5 h-5 sm:w-6 sm:h-6 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+            </div>
+            <h3 class="text-xs sm:text-sm font-semibold text-silver">Envio Rápido</h3>
+            <p class="text-[10px] sm:text-xs text-silver/50">Em até 48h</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Coleção / Catálogo -->
+    <section id="colecao" class="py-12 sm:py-16 md:py-20">
+      <div class="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6 sm:mb-8">
+          <h2 class="text-2xl sm:text-3xl font-display font-semibold text-silver">
+            Nossas <span class="text-gold">Peças</span>
+          </h2>
+          <div class="flex items-center gap-2 text-xs sm:text-sm text-silver/50">
+            <span>{products.length} produtos</span>
+            <span>•</span>
+            <span>Organizar por:</span>
+            <select class="bg-ink-800 border border-white/10 rounded px-2 py-1 text-silver focus:outline-none focus:border-gold/50">
+              <option>Mais vendidos</option>
+              <option>Menor preço</option>
+              <option>Maior preço</option>
+              <option>Novidades</option>
+            </select>
+          </div>
+        </div>
+
         <!-- Grid de produtos -->
-        <div id="product-grid" class="mt-8 sm:mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
+        <div id="product-grid" class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
           <!-- Skeletons iniciais (serão removidos pelo JS) -->
           <div id="skeleton-loader" class="contents">
+            <ProductCardSkeleton />
+            <ProductCardSkeleton />
             <ProductCardSkeleton />
             <ProductCardSkeleton />
             <ProductCardSkeleton />
@@ -47,8 +111,8 @@ import { products } from '../data/products';
   <!-- WhatsApp flutuante -->
   <WhatsAppButton />
 
-  <!-- Scroll to top -->
-  <ScrollToTop />
+  <!-- Instagram flutuante -->
+  <InstagramButton />
 
   <!-- Script principal modularizado -->
   <script src="../scripts/main.ts"></script>

@@ -9,6 +9,27 @@ let zoomScale = 1;
 let zoomX = 0;
 let zoomY = 0;
 
+// ===== INICIALIZAR BOTÃO INSTAGRAM =====
+window.addEventListener('load', () => {
+  const instagramBtn = document.getElementById('instagram-btn');
+
+  function toggleInstagramBtn() {
+    const scrollY = window.scrollY || window.pageYOffset;
+    const showThreshold = 500;
+
+    if (scrollY > showThreshold) {
+      instagramBtn?.classList.remove('opacity-0', 'invisible');
+      instagramBtn?.classList.add('opacity-100', 'visible');
+    } else {
+      instagramBtn?.classList.add('opacity-0', 'invisible');
+      instagramBtn?.classList.remove('opacity-100', 'visible');
+    }
+  }
+
+  window.addEventListener('scroll', toggleInstagramBtn);
+  toggleInstagramBtn();
+});
+
 // ===== REMOVER SKELETONS E MOSTRAR PRODUTOS =====
 window.addEventListener('load', () => {
   const skeletonLoader = document.getElementById('skeleton-loader');
