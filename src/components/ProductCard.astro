@@ -23,6 +23,7 @@ const precoFormatado = product.price.toLocaleString('pt-BR', {
   data-description={product.description}
   data-details={JSON.stringify(product.details)}
   class="product-card group relative cursor-pointer overflow-hidden rounded-2xl border border-white/10 bg-ink-800 transition-all duration-300 hover:border-gold/50 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(212,175,55,0.3)]"
+  style="touch-action: manipulation;"
 >
   <!-- Imagem -->
   <div class="relative aspect-square overflow-hidden bg-gradient-to-br from-ink-700 to-ink-900">
@@ -39,7 +40,7 @@ const precoFormatado = product.price.toLocaleString('pt-BR', {
       Prata 925
     </span>
     {product.featured && (
-      <span class="absolute top-1.5 right-1.5 sm:top-2 sm:right-2 rounded-full bg-gold px-1.5 py-0.5 sm:px-2 sm:py-0.5 text-[8px] sm:text-[9px] font-bold uppercase tracking-widest text-white animate-pulse-glow">
+      <span class="absolute top-1.5 right-1.5 sm:top-2 sm:right-2 rounded-full bg-gold px-1.5 py-0.5 sm:px-2 sm:py-0.5 text-[8px] sm:text-[9px] font-bold uppercase tracking-widest text-white">
         ★ Destaque
       </span>
     )}
@@ -72,10 +73,4 @@ const precoFormatado = product.price.toLocaleString('pt-BR', {
     </div>
   </div>
 
-  <!-- Overlay de clique -->
-  <button
-    type="button"
-    class="absolute inset-0 z-10 focus:outline-none"
-    aria-label={`Ver detalhes de ${product.name}`}
-  ></button>
 </article>

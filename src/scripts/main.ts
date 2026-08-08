@@ -9,27 +9,6 @@ let zoomScale = 1;
 let zoomX = 0;
 let zoomY = 0;
 
-// ===== INICIALIZAR BOTÃO INSTAGRAM =====
-window.addEventListener('load', () => {
-  const instagramBtn = document.getElementById('instagram-btn');
-
-  function toggleInstagramBtn() {
-    const scrollY = window.scrollY || window.pageYOffset;
-    const showThreshold = 500;
-
-    if (scrollY > showThreshold) {
-      instagramBtn?.classList.remove('opacity-0', 'invisible');
-      instagramBtn?.classList.add('opacity-100', 'visible');
-    } else {
-      instagramBtn?.classList.add('opacity-0', 'invisible');
-      instagramBtn?.classList.remove('opacity-100', 'visible');
-    }
-  }
-
-  window.addEventListener('scroll', toggleInstagramBtn);
-  toggleInstagramBtn();
-});
-
 // ===== REMOVER SKELETONS E MOSTRAR PRODUTOS =====
 window.addEventListener('load', () => {
   const skeletonLoader = document.getElementById('skeleton-loader');
@@ -52,13 +31,49 @@ window.addEventListener('load', () => {
           element.style.transform = 'translateY(0)';
         }, index * 100);
       });
+
+      // Atualizar productCards e adicionar event listeners
+      productCards = document.querySelectorAll('.product-card');
+      console.log('Product cards found:', productCards.length);
+      productCards.forEach((card) => {
+        let touchStartX = 0;
+        let touchStartY = 0;
+        let touchStartTime = 0;
+
+        card.addEventListener('click', (e) => {
+          console.log('Click event triggered on card:', card);
+          openModal(card);
+        });
+
+        card.addEventListener('touchstart', (e) => {
+          console.log('Touchstart event triggered on card:', card);
+          const touch = e.touches[0];
+          touchStartX = touch.clientX;
+          touchStartY = touch.clientY;
+          touchStartTime = Date.now();
+        });
+
+        card.addEventListener('touchend', (e) => {
+          console.log('Touchend event triggered on card:', card);
+          const touch = e.changedTouches[0];
+          const touchEndX = touch.clientX;
+          const touchEndY = touch.clientY;
+          const touchDuration = Date.now() - touchStartTime;
+          
+          // Calcular distância do movimento
+          const deltaX = Math.abs(touchEndX - touchStartX);
+          const deltaY = Math.abs(touchEndY - touchStartY);
+          
+          // Se o toque foi rápido (menos de 300ms) e com pouco movimento (menos de 10px), é um tap
+          if (touchDuration < 300 && deltaX < 10 && deltaY < 10) {
+            e.preventDefault();
+            e.stopPropagation();
+            openModal(card);
+          }
+        });
+      });
     }, 800);
   }
-
-  // Atualizar productCards após carregamento
-  setTimeout(() => {
-    productCards = document.querySelectorAll('.product-card');
-  }, 900);
 });
 
 // ===== MODAL DE DETALHES =====
@@ -177,10 +192,7 @@ function handleZoomImage(e: MouseEvent) {
   modalImage.style.transformOrigin = `${xPercent}% ${yPercent}%`;
 }
 
-// Eventos de modal
-productCards.forEach((card) => {
-  card.addEventListener('click', () => openModal(card));
-});
+// Eventos de modal (já adicionados no window.load)
 if (modalClose) modalClose.addEventListener('click', closeModal);
 if (modalBackdrop) modalBackdrop.addEventListener('click', closeModal);
 

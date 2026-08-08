@@ -6,7 +6,7 @@
 import { validateBrandName, validateSiteUrl, validateWhatsAppNumber } from './utils/validation';
 
 // Carregar e validar variáveis de ambiente
-const rawWhatsappNumber = import.meta.env.WHATSAPP_NUMBER || '5511999998888';
+const rawWhatsappNumber = import.meta.env.WHATSAPP_NUMBER || '558591661339';
 const rawBrandName = import.meta.env.BRAND_NAME || 'JS';
 const rawSiteUrl = import.meta.env.SITE_URL || 'https://sua-marca.com.br';
 
@@ -30,10 +30,10 @@ export const SITE = {
   // ----------------------------------------------------------------
   // Formato: código do país + DDD + número, SEM espaços, símbolos ou zero à esquerda.
   // Exemplos:
-  //   Brasil (SP):  5511999998888   (55 + 11 + 999998888)
-  //   Brasil (RJ):  5521988887777   (55 + 21 + 988887777)
+  //   Brasil (CE):  558591661339   (55 + 85 + 91661339)
+  //   Brasil (SP):  5511912345678   (55 + 11 + 912345678)
   //
-  // Defina em .env.local: WHATSAPP_NUMBER=5511999998888
+  // Defina em .env.local: WHATSAPP_NUMBER=558591661339
   whatsappNumber: whatsappNumber,
 
   /** Mensagem pré-preenchida ao clicar em "Comprar" (use {produto} e {preco}) */
